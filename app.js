@@ -151,6 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('click', handleNextButton);
     restartBtn.addEventListener('click', () => location.reload()); // Cara mudah untuk restart
 
+    <body oncontextmenu="return false;">
+
     // Muat soal saat halaman dimuat
     loadQuestions();
 });
