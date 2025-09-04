@@ -1,0 +1,228 @@
+/* General Styling */
+:root {
+    --primary-color: #4a90e2;
+    --primary-hover: #357abd;
+    --correct-color: #50c878;
+    --incorrect-color: #e57373;
+    --background-color: #f4f7f9;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px 30px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 25px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn.btn-danger {
+    background-color: var(--incorrect-color);
+}
+.btn.btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+/* Forms (Admin Page) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"] {
+    margin-bottom: 10px;
+}
+
+/* Question List (Admin Page) */
+#question-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#question-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--primary-color);
+}
+
+#question-list li strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#question-list li .correct {
+    color: var(--correct-color);
+    font-weight: bold;
+}
+
+/* Quiz Screen */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+#timer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    width: 100%;
+}
+
+.option-btn:hover:not([disabled]) {
+    background-color: #e0e0e0;
+    border-color: var(--primary-color);
+}
+
+.option-btn.correct {
+    background-color: var(--correct-color);
+    border-color: var(--correct-color);
+    color: white;
+}
+
+.option-btn.incorrect {
+    background-color: var(--incorrect-color);
+    border-color: var(--incorrect-color);
+    color: white;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Result Screen */
+.score {
+    font-size: 3em;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+#feedback-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Links */
+.nav-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.admin-link {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .options-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
