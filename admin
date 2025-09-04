@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bank Soal CBT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Panel Bank Soal</h1>
+            <p>Tambahkan, lihat, dan kelola pertanyaan untuk kuis.</p>
+            <a href="index.html" class="nav-link">Buka Halaman Kuis &rarr;</a>
+        </header>
+
+        <main class="admin-main">
+            <!-- Form untuk menambah soal baru -->
+            <div class="card">
+                <h2>Tambah Soal Baru</h2>
+                <form id="add-question-form">
+                    <div class="form-group">
+                        <label for="question-text">Teks Pertanyaan:</label>
+                        <textarea id="question-text" rows="3" required placeholder="Masukkan pertanyaan di sini..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Jawaban:</label>
+                        <input type="text" id="option-a" placeholder="Pilihan A" required>
+                        <input type="text" id="option-b" placeholder="Pilihan B" required>
+                        <input type="text" id="option-c" placeholder="Pilihan C" required>
+                        <input type="text" id="option-d" placeholder="Pilihan D" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correct-answer">Kunci Jawaban:</label>
+                        <select id="correct-answer" required>
+                            <option value="">-- Pilih Jawaban Benar --</option>
+                            <option value="0">Pilihan A</option>
+                            <option value="1">Pilihan B</option>
+                            <option value="2">Pilihan C</option>
+                            <option value="3">Pilihan D</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Simpan Pertanyaan</button>
+                </form>
+            </div>
+
+            <!-- Daftar soal yang sudah ada -->
+            <div class="card">
+                <h2>Daftar Soal Tersimpan</h2>
+                <div id="question-list-container">
+                    <p id="no-questions-message">Belum ada soal yang disimpan.</p>
+                    <ul id="question-list"></ul>
+                </div>
+                <button id="clear-questions-btn" class="btn btn-danger">Hapus Semua Soal</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script untuk fungsionalitas admin -->
+    <script src="admin.js"></script>
+</body>
+</html>
