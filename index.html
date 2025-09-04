@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT - Uji Kemampuan Anda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Tampilan Awal -->
+        <div id="start-screen" class="card text-center">
+            <h1>Selamat Datang di Kuis CBT</h1>
+            <p>Uji pengetahuan Anda dengan soal-soal yang telah disiapkan. Klik tombol di bawah untuk memulai.</p>
+            <button id="start-btn" class="btn">Mulai Kuis!</button>
+            <a href="admin.html" class="nav-link admin-link">Buka Halaman Admin</a>
+        </div>
+
+        <!-- Tampilan Kuis -->
+        <div id="quiz-screen" class="hidden">
+            <div class="quiz-header">
+                <span id="question-counter"></span>
+                <div id="timer">00:00</div>
+            </div>
+            <div class="card">
+                <h2 id="question-text"></h2>
+                <div id="options-container" class="options-grid">
+                    <!-- Pilihan jawaban akan dimasukkan oleh JavaScript -->
+                </div>
+            </div>
+            <button id="next-btn" class="btn hidden">Lanjut &rarr;</button>
+        </div>
+
+        <!-- Tampilan Hasil -->
+        <div id="result-screen" class="card text-center hidden">
+            <h1>Kuis Selesai!</h1>
+            <h2>Skor Anda:</h2>
+            <p id="score-text" class="score"></p>
+            <p id="feedback-text"></p>
+            <button id="restart-btn" class="btn">Coba Lagi</button>
+        </div>
+    </div>
+
+    <!-- Script untuk fungsionalitas kuis -->
+    <script src="app.js"></script>
+</body>
+</html>
